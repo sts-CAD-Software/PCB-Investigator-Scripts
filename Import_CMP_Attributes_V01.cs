@@ -4,7 +4,7 @@
 // Created on 23.02.2016
 // Autor Guenther
 // 
-// Empty template to fill for synchronous script.
+// Add Component Attributes to an ODB++ job.
 //-----------------------------------------------------------------------------------
 
 
