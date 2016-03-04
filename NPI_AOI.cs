@@ -1,11 +1,11 @@
 //ASynchronous template
 //-----------------------------------------------------------------------------------
 // PCB-Investigator Automation Script
-// Created on 28.09.2015
+// Created on 04.03.2016
 // Autor Guenther Schindler
 // 
-// Use AOI images to verify fist asembled PCB
-// Disply images and report component data on screen
+// Use AOI images to verify fist assembled PCB
+// Display images and report component data on screen
 // on screen HMI
 //-----------------------------------------------------------------------------------
 
