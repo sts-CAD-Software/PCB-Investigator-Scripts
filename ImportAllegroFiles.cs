@@ -1,10 +1,12 @@
 //Synchronous template
 //-----------------------------------------------------------------------------------
 // PCB-Investigator Automation Script
-// Created on 05.04.2016
+// Created on 11.04.2016
 // Autor Fabio.Gruber
 // 
 // Import gerber and excellon file output from Cadence Allegro (tools defined as comments beginning with ; and much more information like tolerance and quantity).
+// It checks for unit MM or MILS.
+// To use the script configurate the leading and trailing digits at the script begin.
 //-----------------------------------------------------------------------------------
 // GUID newScript_635954556024364499
 
@@ -34,6 +36,12 @@ namespace PCBIScript
         public void Execute(IPCBIWindow parent)
         {
             //import excellon file output from Cadence Allegro (tools defined as comments)
+            //insert digits for reading inner values of drill file (most no information in drill files, you can have a look on your gerber files to identify it).
+            //If you load gerber and drill together there is a auto scaling implemented.
+            int LeadingDigits = 2;
+            int TrailingDigits = 4;
+		bool UseMils = true;
+
 
             Parent = parent;
             IFilter filter = new IFilter(parent);
@@ -43,19 +51,22 @@ namespace PCBIScript
 
             }
             stop = false;
+		bool TryAutoSize = false;
 
-            string DrillHeader = "Format  : 5.5 / Absolute / INCH / Trailing*" + Environment.NewLine;
+            string DrillHeader = "Format  : " + LeadingDigits + "." + TrailingDigits + " / Absolute / INCH / Trailing*" + Environment.NewLine;
             DrillHeader += "Contents: Thru / Drill / Plated*" + Environment.NewLine;
             //   DrillHeader += "M48**" + Environment.NewLine;
             DrillHeader += "FMAT,1*" + Environment.NewLine;
             DrillHeader += "INCH,TZ*" + Environment.NewLine;
             DrillHeader += "ICI,OFF*";
 
+		ILayer drillLayer =null;
+                
             System.Windows.Forms.OpenFileDialog of = new System.Windows.Forms.OpenFileDialog();
             of.Multiselect = true;
             if (of.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                PCB_Investigator.PCBIWindows.PCBIWorkingDialog working = new PCB_Investigator.PCBIWindows.PCBIWorkingDialog();
+ 		  PCB_Investigator.PCBIWindows.PCBIWorkingDialog working = new PCB_Investigator.PCBIWindows.PCBIWorkingDialog();
                 working.CanCancel(true);
                 working.CancelPressed += working_CancelPressed;
                 working.SetStatusText("Parsing files...");
@@ -72,6 +83,7 @@ namespace PCBIScript
                     gsr.Close();
                     gfs.Close();
                     string fullPath = Path.GetTempPath() + Path.GetFileName(FileName);
+                    
                     counter += stepOneFile;
 
                     if (File.Exists(fullPath))
@@ -109,6 +121,8 @@ namespace PCBIScript
                                 int indexHolesize = s.IndexOf("Holesize");
                                 if (indexHolesize > 0)
                                 {
+                                    bool containsMil = s.Contains("MILS");
+                                    bool containsMM = s.Contains("MM");
 
                                     //check = nach holesize
                                     StringBuilder digitsOfDiameter = new StringBuilder();
@@ -138,7 +152,13 @@ namespace PCBIScript
 
                                     if (digitsOfDiameter.Length > 0)
                                     {
-                                        GerberWriterSW.WriteLine(s.Substring(1, 3) + "C" + digitsOfDiameter.ToString());
+                                        if (containsMM && !containsMil)
+                                        {
+                                            double diameterTool = ParseHeader(digitsOfDiameter.ToString(), true) / 1000;
+                                            GerberWriterSW.WriteLine(s.Substring(1, 3) + "C" + diameterTool.ToString().Replace(",", "."));
+                                        }
+                                        else
+                                            GerberWriterSW.WriteLine(s.Substring(1, 3) + "C" + digitsOfDiameter.ToString());
                                     }
                                 }
                                 else GerberWriterSW.WriteLine(s);
@@ -150,22 +170,47 @@ namespace PCBIScript
                         GerberWriterSW.Flush();
                         GerberWriterSW.Close();
                         IStep step = parent.GetCurrentStep();
+				working.DoClose();
+			    MessageBox.Show("Parameter"+  Environment.NewLine+"Leading "+LeadingDigits+" Trailing "+TrailingDigits+  Environment.NewLine+"Unit "+(UseMils?"mils":"mm")+  Environment.NewLine ,"Drill Setup");
+				IMatrix matrix = parent.GetMatrix();
 
-                        string drillLayername = step.AddGerberLayer(fullPath, true, PCBI.ImportOptions.FormatTypes.Excellon1, 2, 3, true, true);
+            		   if (matrix != null) matrix.DelateLayer(System.IO.Path.GetFileName( fullPath), false);
+                       
+			   string drillLayername = step.AddGerberLayer(fullPath, true, PCBI.ImportOptions.FormatTypes.Excellon1, LeadingDigits, TrailingDigits, UseMils , TryAutoSize );
 
-                        ILayer drillLayer = step.GetLayer(drillLayername);
+                        drillLayer = step.GetLayer(drillLayername);
                         Dictionary<double, int> diameterShapeList = new Dictionary<double, int>();
-                    }
+                        
+  }
                 }
                 working.DoClose();
 
             }
             parent.UpdateControlsAndResetView();
+
+		if(drillLayer!=null)
+		drillLayer.EnableLayer(true);
+
         }
         void working_CancelPressed()
         {
             stop = true;
         }
-
+        private double ParseHeader(string s, bool inMM)
+        {
+            try
+            {
+                double num = double.Parse(s, System.Globalization.NumberStyles.Any );
+                if (inMM)
+                {
+                    return IMath.MM2Mils(num)/1000;
+                }
+                return num;
+            }
+            catch
+            {
+                return 1;//default size
+            }
+        }
     }
 }
