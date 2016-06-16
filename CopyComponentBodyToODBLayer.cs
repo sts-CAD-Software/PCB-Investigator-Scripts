@@ -85,9 +85,8 @@ namespace PCBIScript
                     {
                         polyStart = false;
                         CMP_Body_Polygon.StartPolygon(false, new PointF((float)edge.Begin.X, (float)edge.Begin.Y));
-
                     }
-                    else
+                  
                         if (edge is IArcEdge)
                         {
                             IArcEdge aEdge = (IArcEdge)edge;
