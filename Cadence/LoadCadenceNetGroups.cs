@@ -33,7 +33,7 @@ namespace PCBIScript
  			//your code here
             ProcessStartInfo psi = new ProcessStartInfo();
 		string realPCBI = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + System.IO.Path.DirectorySeparatorChar + "EasyLogix" + System.IO.Path.DirectorySeparatorChar + "PCB-Investigator" + Path.DirectorySeparatorChar + "Scripts" + Path.DirectorySeparatorChar;
-            psi.FileName = realPCBI + @"\CadanceNetGroup2PCBI.exe";
+            psi.FileName = realPCBI + @"\CadenceNetGroup2PCBI.exe";
             psi.Arguments = parent.GetODBJobDirectory()  + " -step " + parent.GetCurrentStep().Name;
             Process.Start(psi);
 			
