@@ -5,7 +5,7 @@
 // www.pcb-investigator.com
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
-// Change Endpoint of object to close gap between two selected objects.
+// Change Endpoint of object to close gap between two selected lines.
 //-----------------------------------------------------------------------------------
 
 using System;
