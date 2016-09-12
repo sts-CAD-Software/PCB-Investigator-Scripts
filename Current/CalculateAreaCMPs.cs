@@ -86,7 +86,7 @@ namespace PCBIScript
 
             double areaPCB = step.CalculateBoardArea();
 
-            if (parent.GetUnit()) //change mils² to cm²
+            if (parent.GetUnit()) //change milsÂ² to cmÂ²
             {
                 areaPCB = areaPCB / 155000.31; //(1/2.54*2.54)
                 TopArea = TopArea / 155000.31;
@@ -97,7 +97,7 @@ namespace PCBIScript
                 (CalculateTopSide ? "Top Side Components: " + TopArea + Environment.NewLine : "") +
                 (CalculateBotSide ? "Bot Side Components: " + BotArea + Environment.NewLine : "") +
                 ((!CalculateBotSide && !CalculateTopSide) ? "No Elements allowed, please run check with other parameters!" : "") + Environment.NewLine +
-                "Board Area " + areaPCB + (parent.GetUnit() ?  " cm²":" mils²")
+                "Board Area " + areaPCB + (parent.GetUnit() ?  " cmÂ²":" milsÂ²")
                 , "Result", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
         }
 		
