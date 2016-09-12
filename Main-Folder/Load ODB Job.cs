@@ -24,7 +24,8 @@ namespace PCBIScript
 
         public void Execute(IPCBIWindow PCBI_Host)
         {
-            PCBI_Host.LoadODBJob(@"C:\D\Jobs\2014\fez_hacker_1_1_odb\fez_hacker_1_1_odb");
+        	//put in a local ODB++ directory path here:
+            PCBI_Host.LoadODBJob(@"C:\D\Jobs\fez_hacker_1_1_odb");
 
 			IStep step = PCBI_Host.GetStep("fez_hacker");
 
