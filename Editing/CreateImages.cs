@@ -21,6 +21,7 @@ namespace PCBIScript
 {
     public class PScript : IPCBIScript
     {
+        string FileLocation = @"C:\Temp\";
         public PScript()
         {
         }
@@ -38,7 +39,7 @@ namespace PCBIScript
             {
                 List<ILayer> layers = new List<ILayer>();
                 layers.Add(step.GetLayer(layername));
-                SaveImageFromComponent(step, layers, @"C:\E\tests\");
+                SaveImageFromComponent(step, layers, FileLocation);
             }
             //something went wrong?
             string errorLog = IAutomation.GetErrorLog();
