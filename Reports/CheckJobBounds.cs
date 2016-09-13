@@ -64,10 +64,5 @@ namespace PCBIScript
             MessageBox.Show("The Job has following bounds in mils:" + Environment.NewLine + " X " + boundsJob.X.ToString() + " ; Y " + boundsJob.Y.ToString() + " ; width " + boundsJob.Width + " ; height " + boundsJob.Height, "Job Bounds", MessageBoxButtons.OK, MessageBoxIcon.Information);
        
 		}
-	
-		public  StartMethode GetStartMethode()
-		{
-			return StartMethode.Synchronous;
-		}
    }
 }
