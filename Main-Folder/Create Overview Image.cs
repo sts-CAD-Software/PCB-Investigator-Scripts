@@ -139,6 +139,10 @@ namespace PCBIScript
                             }
                             resultImage = step.GetBitmap(drawList, boundsStep, width, height, true, false, false, false);
                             // public Bitmap GetBitmap(	List<ILayer> Layers,RectangleF DetailRectangle,	int Width,	int Height,	bool DrawPCBOutline,	bool FillBoardOutline,	bool ShowComponentDetails,	bool IgnoreSelection,	bool DrawOnlySelection,	out RectangleF DrawnRectangle
+                      
+                            Bitmap copyBitmap = new Bitmap(resultImage); //do copy the image before the old one will be disposed
+
+                            resultImage = copyBitmap;
                         }
                         else
                         {
