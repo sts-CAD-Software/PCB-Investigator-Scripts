@@ -5,7 +5,8 @@
 // www.pcb-investigator.com
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
-// Open ODB++ Job on hardcoded path
+
+// Open ODB++ Job on hardcoded path on your local drive D (You have to change the path depending on your directory structure).
 //-----------------------------------------------------------------------------------
 
 using System;
@@ -25,9 +26,9 @@ namespace PCBIScript
 
         public void Execute(IPCBIWindow PCBI_Host)
         {
-            PCBI_Host.LoadODBJob(@"D:\D_\examples\odbjob");
+            PCBI_Host.LoadODBJob(@"D:\jobs\examples\odbjob"); //this works only if the location exists and the folder contains an odb++ design!
 
-			IStep step = PCBI_Host.GetStep("pcb");
+			IStep step = PCBI_Host.GetStep("pcb"); //the step name must be correct to find the step with this method.
 
 			if(step ==null) return;
 				step.ActivateStep();
