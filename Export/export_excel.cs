@@ -4,8 +4,9 @@
 // www.pcb-investigator.com
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
+//
 // Example to export data to excel, component references, partnames and packages are written in excel table.
-// This can script is a basic example how to export data to MS excel, you can update it to add more information for components or change it a little bit to export e.g. net information.
+// This script is a basic example how to export data to MS excel, you can update it to add more information for components or change it a little bit to export e.g. net information.
 //-----------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
