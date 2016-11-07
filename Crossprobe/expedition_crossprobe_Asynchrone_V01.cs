@@ -1,10 +1,11 @@
 // PCB-Investigator Automation Script
-// Created on 201-28-10
+// Created on 2015-28-10
 // Autor support@easylogix.de
 // www.pcb-investigator.com
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
-// Cross Probe Components in Expedition
+//
+// Cross Probe Components in Expedition. This example works only with running Expedition!
 //-----------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,6 @@ using System.Reflection;
 using System.Threading;
 namespace PCBIScript
 {
-
     public class PScript : IPCBIScriptASync
     {
         public PScript()
