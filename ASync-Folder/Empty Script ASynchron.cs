@@ -2,9 +2,9 @@
 //-----------------------------------------------------------------------------------
 // PCB-Investigator Automation Script
 // Created on 29.04.2014
-// Autor Fabio
+// Autor easylogix
 // 
-// Empty template to fill for asynchronous script.
+// Empty template to fill for asynchronous script. This example is only for adding your own code, you can also create this empty template in scripting engine dialog directly.
 //-----------------------------------------------------------------------------------
 
 using System;
@@ -32,11 +32,11 @@ namespace PCBIScript
 			//add code here
 
 			while (true)
-            {
-                Thread.Sleep(1000);
+            		{
+                	Thread.Sleep(1000);
 
-                if (isDisposed)
-                    break;
+                	if (isDisposed)
+                    		break;
 			}
 		}
 		
