@@ -236,7 +236,7 @@ namespace PCBIScript
                             {
                                 markerPad.ObjectColor = Color.Red;
                                 markerPad.SetAttribute("Serrated <C>"); //hier evtl noch überprüfen ob pin bzw. body drüber liegt?
-                                special = true;                            //oder Serrated with overlapping plastic <CS>
+                                special = true;                            
                                 break;
                             }
                         }
