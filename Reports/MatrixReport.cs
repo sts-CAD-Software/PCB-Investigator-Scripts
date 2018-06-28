@@ -39,8 +39,8 @@ namespace PCBIScript
 			{
 			List<string> columheader = new List<string>();
             columheader.Add("Layer Name");
-            columheader.Add("Layer Thickness");
-            columheader.Add("Layer Position");
+            columheader.Add("Layer Thickness µm");
+            columheader.Add("Layer Position µm");
             PCB_Investigator.PCBIWindows.PCBIResultDialog layerDlg = new PCBIResultDialog(columheader,"Matrix");
 			IStep step = parent.GetCurrentStep();
 			IMatrix matrix = parent.GetMatrix();
@@ -57,6 +57,10 @@ namespace PCBIScript
                 {
                                     lvi.BackColor = Color.Orange;
                 }
+               if(matrix.GetMatrixLayerType(layername) == MatrixLayerType.Power_ground)
+                {
+                                    lvi.BackColor = Color.Orange;
+                }                
                if(matrix.GetMatrixLayerType(layername) == MatrixLayerType.Solder_mask)
                 {
                                     lvi.BackColor = Color.LightGreen;
@@ -73,10 +77,10 @@ namespace PCBIScript
                 {
                                     lvi.BackColor = Color.LightSteelBlue;
                 }
-                double Layerpos = IMath.Mils2MM(MatrixHelpers.GetLayerPositionInStackUp(layername, step, matrix));
-                double layerthickness = IMath.Mils2MM(step.GetHeightOfLayer(layername));
-                lvi.SubItems.Add(layerthickness.ToString("N4"));
-                lvi.SubItems.Add(Layerpos.ToString("N4"));
+                double Layerpos = IMath.Mils2MM(MatrixHelpers.GetLayerPositionInStackUp(layername, step, matrix)) * 1000;
+                double layerthickness = IMath.Mils2MM(step.GetHeightOfLayer(layername)) * 1000;
+                lvi.SubItems.Add(layerthickness.ToString("N2"));
+                lvi.SubItems.Add(Layerpos.ToString("N2"));
                 layerDlg.AddListViewItem(lvi);
             }
             layerDlg.ShowDlg(PCBIResultDialog.WindowType.Modal);
