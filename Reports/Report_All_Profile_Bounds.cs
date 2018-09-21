@@ -63,7 +63,7 @@ namespace PCBIScript
             {
                 IStep step = parent.GetStep(sr.NAME);
                 System.Drawing.Drawing2D.Matrix matrix = new System.Drawing.Drawing2D.Matrix();
-                matrix.Rotate((float)sr.ANGLE,System.Drawing.Drawing2D.MatrixOrder.Append);
+                matrix.Rotate(-(float)sr.ANGLE,System.Drawing.Drawing2D.MatrixOrder.Append);
                 matrix.Translate((float)sr.X, (float)sr.Y,System.Drawing.Drawing2D.MatrixOrder.Append);
                 RectangleF BoardSize = IMath.RectangleTransformWithMatrix(step.GetBoundsD(), matrix).ToRectangleF();
                 PointD originOfBoard = new PointD(sr.X,sr.Y);
