@@ -125,7 +125,7 @@ namespace PCBIScript
                 BoaurdSizeLU = (BoardSize.X * unit).ToString("N3") + " / " + (BoardSize.Y * unit).ToString("N3");
                 BoardSizeRO = (BoardSize.Right * unit).ToString("N3") + " / " + (BoardSize.Bottom * unit).ToString("N3");
                 OriginBoardPoint = (originOfBoard.X * unit).ToString("N3") + " / " + (originOfBoard.Y * unit).ToString("N3");
-                g.TranslateTransform(1, -1);
+               // g.TranslateTransform(1, -1);
                 g.DrawString(BoaurdSizeWidth + " mm", new Font("Arial", 10), Brushes.YellowGreen, new Point((int)((locationBoard.X + rightTopBoard.X) / 2.1), locationBoard.Y - 20));
                 g.DrawString(BoardSizeHeight + " mm", new Font("Arial", 10), Brushes.YellowGreen, new Point(rightTopBoard.X - 70, (int)((rightTopBoard.Y + locationBoard.Y) / 2) - 5));
 
@@ -136,7 +136,7 @@ namespace PCBIScript
             }
             else
             {
-                g.TranslateTransform(1, -1);
+              //  g.TranslateTransform(1, -1);
                 g.DrawString(BoaurdSizeWidth + " mils", new Font("Arial", 10), Brushes.YellowGreen, new Point((int)((locationBoard.X + rightTopBoard.X) / 2.1), locationBoard.Y - 20));
                 g.DrawString(BoardSizeHeight + " mils", new Font("Arial", 10), Brushes.YellowGreen, new Point(rightTopBoard.X - 70, (int)((rightTopBoard.Y + locationBoard.Y) / 2) - 10));
 
