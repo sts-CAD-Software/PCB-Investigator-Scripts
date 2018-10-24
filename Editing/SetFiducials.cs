@@ -1,10 +1,10 @@
-// Autor support@easylogix.de
+﻿// Autor support@easylogix.de
 // www.pcb-investigator.com
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Set fix fiducial markers on extra layer.
 //-----------------------------------------------------------------------------------
-
+// GUID C0138764-85A3-4960-B95F-62A4486FF427
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,9 +27,9 @@ namespace PCBIScript
 
 		public void Execute(IPCBIWindow parent)
 		{
-			IFilter filter = new IFilter(parent);
+            IFilter filter = new IFilter(parent);
 
-			IStep curStep = parent.GetCurrentStep();
+            IStep curStep = parent.GetCurrentStep();
             if (curStep == null)
             {
                 MessageBox.Show("No Job loaded, please load a job before start this script!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -46,23 +46,23 @@ namespace PCBIScript
                 return;
             }
 
-            int shapeIndex = IFilter.AddToolDefinitionDonut(fiducialLayer, 157.48f, 78.74f, 0);
+            int shapeIndex = IFilter.AddToolDefinitionDonut(fiducialLayer, (float)IMath.MM2Mils(2),(float) IMath.MM2Mils(1), -1);
 
             IODBObject pad = filter.CreatePad(fiducialLayer);
-            pad.SetSpecifics(new IPadSpecificsD() { Location = new PCBI.MathUtils.PointD(0236.22, 9803), ShapeIndex = shapeIndex, Positiv = true });
 
+            PointD FidPoint = new PointD(IMath.MM2Mils(3), IMath.MM2Mils(3));
+            pad.SetSpecifics(new IPadSpecificsD() { Location = FidPoint, ShapeIndex = shapeIndex, Positive = true });
+            IAttributeElement attribute = new IAttributeElement(PCBI.FeatureAttributeEnum.fiducial_name);
+            attribute.Value = "fid1";
+            IAttribute.SetAttribute(attribute, pad);
+
+            FidPoint = new PointD(IMath.MM2Mils(3), IMath.MM2Mils(147));
             pad = filter.CreatePad(fiducialLayer);
-            pad.SetSpecifics(new IPadSpecificsD() { Location = new PCBI.MathUtils.PointD(14665, 9803), ShapeIndex = shapeIndex, Positiv = true });
-
-            pad = filter.CreatePad(fiducialLayer);
-            pad.SetSpecifics(new IPadSpecificsD() { Location = new PCBI.MathUtils.PointD(0236.22, 0236.22), ShapeIndex = shapeIndex, Positiv = true });
-
-            pad = filter.CreatePad(fiducialLayer);
-            pad.SetSpecifics(new IPadSpecificsD() { Location = new PCBI.MathUtils.PointD(14665, 0236.22), ShapeIndex = shapeIndex, Positiv = true });
-
-            IMatrix matrix = parent.GetMatrix();
-            matrix.UpdateDataAndList();
-            parent.UpdateView();
+            pad.SetSpecifics(new IPadSpecificsD() { Location = FidPoint, ShapeIndex = shapeIndex, Positive = true });
+            attribute = new IAttributeElement(PCBI.FeatureAttributeEnum.fiducial_name);
+            attribute.Value = "fid1";
+            IAttribute.SetAttribute(attribute, pad);
+            parent.UpdateControlsAndResetView();
 		}
     
 	}
