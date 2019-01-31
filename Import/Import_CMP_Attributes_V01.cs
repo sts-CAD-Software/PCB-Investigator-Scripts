@@ -1,7 +1,8 @@
-//Synchronous template
+ï»¿//Synchronous template
 //-----------------------------------------------------------------------------------
 // PCB-Investigator Automation Script
 // Created on 23.02.2016
+// Changed 31.02.2019
 // Autor Guenther
 // 
 // Add Component Attributes to an ODB++ job.
@@ -9,7 +10,7 @@
 
 
 // Comment	Description	Footprint	LibRef	Quantity	Designator
-// 1uF	0603 1 uF 16 V ±10% Tolerance X5R SMT Multilayer Ceramic Capacitor	PCB-9voc856bm8rdirtpr58d-1	CMP-19299708-5	1	C1
+// 1uF	0603 1 uF 16 V ï¿½10% Tolerance X5R SMT Multilayer Ceramic Capacitor	PCB-9voc856bm8rdirtpr58d-1	CMP-19299708-5	1	C1
 
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,23 @@ namespace PCBIScript
             }
             return null;
         }
+        private int CountChars(string text)
+        {
+            int count = 0;
+            foreach (char c in text)
+            {
+                if (!Char.IsDigit(c))
+                {
+                    count++;
+
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return count;
+        }
         private string CreateNewRefList(string oldList)
         {
             string[] desList = oldList.Split(',');
@@ -89,9 +107,30 @@ namespace PCBIScript
                     }
                     string RefName = part.Substring(0, part.IndexOf(startDigit));
                     string startNum = part.Substring(part.IndexOf(startDigit), part.IndexOf("-") - part.IndexOf(startDigit));
-                    string endNum = part.Substring(part.IndexOf("-") + 1);
-                    int startIndex = int.Parse(startNum);
-                    int endIndex = int.Parse(endNum) + 1;
+                    string endNum = part.Substring(part.IndexOf("-") + 1 + CountChars(part));
+
+                    int startIndex = 0;
+                    try
+                    {
+                        startIndex = int.Parse(startNum);
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(startNum);
+                    }
+
+
+                    int endIndex = 0;
+                    try
+                    {
+                        endIndex = int.Parse(endNum) + 1;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(endNum);
+                    }
+
+
                     for (int i = startIndex; i < endIndex; i++)
                     {
                         newList += RefName + i.ToString() + ",";
@@ -139,9 +178,10 @@ namespace PCBIScript
                             IComponentSpecifics cs = (IComponentSpecifics)cmp.GetSpecifics();
                             cs.Height = float.Parse(myDataGridView.Rows[rows].Cells[col].Value.ToString().Replace(",", "."), nfi);
                             cmp.SetSpecifics(cs);
-                        } else
+                        }
+                        else
                         {
-                            cmp.AddComponentAttribute(myDataGridView.Columns[col].HeaderText.ToLower(), myDataGridView.Rows[rows].Cells[col].Value.ToString(), false);
+                            cmp.AddComponentAttribute(myDataGridView.Columns[col].HeaderText, myDataGridView.Rows[rows].Cells[col].Value.ToString(), false);  // HeaderText.toLower() ??
                             myDataGridView.Rows[rows].Cells[columDesignator].Style.BackColor = Color.GreenYellow;
                         }
                     }
@@ -210,7 +250,7 @@ namespace PCBIScript
         /// <summary>
         /// Verwendete Ressourcen bereinigen.
         /// </summary>
-        /// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        /// <param name="disposing">True, wenn verwaltete Ressourcen gelï¿½scht werden sollen; andernfalls False.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -223,8 +263,8 @@ namespace PCBIScript
         #region Vom Windows Form-Designer generierter Code
 
         /// <summary>
-        /// Erforderliche Methode für die Designerunterstützung.
-        /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+        /// Erforderliche Methode fï¿½r die Designerunterstï¿½tzung.
+        /// Der Inhalt der Methode darf nicht mit dem Code-Editor geï¿½ndert werden.
         /// </summary>
         private void InitializeComponent()
         {
