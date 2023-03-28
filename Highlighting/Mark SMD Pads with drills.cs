@@ -6,6 +6,10 @@
 // 
 // Mark all SMD pads with drill inside, this checks both sides of your PCB. Round Pads are ignored.
 //-----------------------------------------------------------------------------------
+// This script marks all surface mount device (SMD) pads on a PCB layout that have corresponding drill holes.
+// The program searches for all SMD pads on both the top and bottom layers of the PCB and checks if there is a corresponding drill hole on any of the layers associated with that pad.
+// If a corresponding drill hole is found, the SMD pad is marked with a specific color (LightGoldenrodYellow by default) to make it easier to identify. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

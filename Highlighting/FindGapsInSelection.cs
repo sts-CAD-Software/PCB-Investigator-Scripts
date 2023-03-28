@@ -6,6 +6,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Select a group of lines and arcs to find openings at the end of each object.
 //-----------------------------------------------------------------------------------
+// This script is a PCB Investigator automation script that runs on a .NET-based platform and selects a set of lines and arcs to find openings at the end of each object.
+// The script uses the PCB Investigator SDK API to connect to a PCB design and retrieve a list of selected elements.
+// It then iterates through this list and checks to see if there is a connection between the objects. If a connection is found, the color of the object is temporarily changed. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

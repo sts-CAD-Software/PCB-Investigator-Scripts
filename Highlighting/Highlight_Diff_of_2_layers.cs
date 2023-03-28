@@ -7,6 +7,10 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Asynchronous script to compare layers, this works only if two layers active.
 //-----------------------------------------------------------------------------------
+// The script changes the color of the two active layers to visually distinguish them from each other.
+// It is used to make comparing two layers easier and more efficient.
+// The script runs automatically when two layers are active and stops running when the job is closed. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

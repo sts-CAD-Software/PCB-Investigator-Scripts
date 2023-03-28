@@ -7,6 +7,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Mark Pins and Component from special net with color.
 //-----------------------------------------------------------------------------------
+// This script is used to find all components in a PCB layout that have pins starting with the names of GND or VCC nets and mark them green.
+// If the component has both GND and VCC pins, the GND pins are marked in blue-purple and the VCC pins are marked in red.
+// The script uses a list of strings to define the possible names of GND and VCC nets. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -6,6 +6,11 @@
 // 
 // Show all important infos of a selected component directly in graphic pane without extra dialog.
 //-----------------------------------------------------------------------------------
+// The class is used to display text and graphics on the PCB Editor form, especially information about selected parts such as the part number, package name and attributes, and selected elements and their number.
+// The script also includes methods for drawing contacts and date information. When the script is executed, it is called to draw the graphical area of the form.
+// It will run through an infinite loop until the script is terminated. In this case the loop will be interrupted and the script will be logged out from the form. 
+//-----------------------------------------------------------------------------------
+
 
 using System;
 using System.Collections.Generic;

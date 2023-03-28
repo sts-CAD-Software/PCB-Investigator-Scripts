@@ -6,6 +6,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Unmark Pins and Component from special net with color.
 //-----------------------------------------------------------------------------------
+// This script is created to remove pins and components from a given trace and reset their color.
+// It goes through all layers and resets the color of the pins and components.
+// It can be used to highlight or emphasize a trace by hiding all other elements. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

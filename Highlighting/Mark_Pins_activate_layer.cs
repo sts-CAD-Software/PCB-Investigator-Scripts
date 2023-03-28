@@ -6,6 +6,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Mark Pins and Component from special net with color.
 //-----------------------------------------------------------------------------------
+// This script highlights the selected lines and arcs in a PCB by marking them with a dashed line and a colored circle.
+// The script is automatically executed when a PCB is opened and remains active in the background until the PCB is closed.
+// The script is used to make it easier to find and identify lines and arcs in a board. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

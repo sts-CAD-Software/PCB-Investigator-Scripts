@@ -6,6 +6,10 @@
 // 
 // Show start of lines and arcs.
 //-----------------------------------------------------------------------------------
+// This script is used to improve the visibility of lines and arcs to see them more clearly.
+// The script draws a triangle shape at each starting point of lines and arcs to mark the starting point.
+// It is used in PCB layout software to improve the visibility and accuracy of lines and arcs on the board. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

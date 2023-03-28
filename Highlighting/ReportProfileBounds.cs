@@ -6,6 +6,11 @@
 // 
 // Show Board size of current job.
 //-----------------------------------------------------------------------------------
+// The script is used to visualize information about a loaded board in PCB production. 
+// The script is called when a board is loaded and then runs in an infinite loop with a 1-second pause. 
+// The script then draws lines and text to indicate the size of the board, which is displayed in the graphical user interface. 
+// The drawn lines and texts are formatted with different colors and fonts depending on the units of measurement used for the board (millimeters or mils). 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

@@ -4,9 +4,14 @@
 // Created on 13.06.2016
 // Autor Fabio.Gruber
 // 
-// Check all elements on solder mask layers for overlapping paste elements.
+// Check all elements for overlapping paste elements.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636011629960977253
+//
+// This script is used to check all elements on the solder mask for overlaps with paste elements. If such overlaps are found, the script marks the relevant locations on the mask.
+// The script traverses the various solder mask and paste layers of the current step and calls the MarkMaskOverPadsOnPaste function to check and mark potential overlaps.
+// The function does this using various functions of the IPCBI interface to access the objects in the circuit and manipulate their properties. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

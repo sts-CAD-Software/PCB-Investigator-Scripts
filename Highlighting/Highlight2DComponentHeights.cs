@@ -6,6 +6,11 @@
 // 
 // Show a 2D side view of components for each side with board (if the board thickness is available as property).
 //-----------------------------------------------------------------------------------
+// This is a PCB Investigator automation script for performing DFM checks.
+// The script displays a 2D side view of the components for each side with the board (if board height is available as a property).
+// The script traverses all pads on the top and bottom signal and mask planes and checks if there is an opening in the mask spacing.
+// If a corresponding signal is present, a message is output and the user is prompted to view the result in the newly created "Page_Front" and "Page_Side" layers. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

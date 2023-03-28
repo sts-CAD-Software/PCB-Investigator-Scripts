@@ -6,6 +6,11 @@
 // 
 // Show details of job in graphic pane.
 //-----------------------------------------------------------------------------------
+// This C# script is intended for automatically displaying details of a PCB layout job in the PCB-Investigator graphical window.
+// It uses the IPCBIScriptASync interface to execute asynchronous code.
+// The script draws information like selected parts, selected elements, selected reference designers and netlist names of the current step.
+// It uses some graphics methods to draw text in different colors and fonts to represent the details of the job. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

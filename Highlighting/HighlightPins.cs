@@ -6,6 +6,11 @@
 // 
 // Example to highlight pins on top component layer with asynchronous script.
 //-----------------------------------------------------------------------------------
+// The script is used to mark the pins on the top component layer (Top Layer) that are connected to the GND network.
+// It contains a loop that is repeated at certain time intervals.
+// During each loop pass, the current PCB design is retrieved and the pins on the top component layer are searched for pins that are connected to the GND network.
+// The color of the pins is changed accordingly to highlight them.
+//-----------------------------------------------------------------------------------
 
 using PCBI.Automation;
 using System;

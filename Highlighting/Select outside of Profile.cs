@@ -6,6 +6,11 @@
 // 
 // Select all elements outside the board contour, e.g. to delete them.
 //-----------------------------------------------------------------------------------
+// The main goal of the script is to mark and select all objects on all layers (except component layers) within the scope of the PCB profile. 
+// The script accesses the current step and matrix instance to get information about the PCB and its layers. 
+// Then it retrieves the PCB profile as an ODB object and checks whether each object on the plane is inside the profile or not. 
+// If an object is inside the profile, it is ignored, otherwise it is marked and selected. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

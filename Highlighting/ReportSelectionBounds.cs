@@ -6,6 +6,11 @@
 // 
 // Empty template to fill for asynchronous script.
 //-----------------------------------------------------------------------------------
+// It is used to draw a rectangle surrounding the selected PCB design and display the dimensions and center of the PCB. 
+// Once the design is loaded, the script will go through all the selected elements and components to find the rectangle that encloses the entire design. 
+// Lines are then drawn to show the width and height of the PCB, as well as the center point. If the PCB is displayed in millimeters, the dimensions are also displayed in millimeters. 
+// The script is used to quickly check the size and center of a PCB design and display this information. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

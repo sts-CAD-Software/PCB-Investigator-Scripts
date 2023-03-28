@@ -9,6 +9,13 @@
 // 
 // Jump from left down to right up in small areas to check all board parts.
 //-----------------------------------------------------------------------------------
+// This script allows you to automatically scan a PCB by jumping from bottom left to top right.
+// The goal is to ensure that all parts of the PCB are checked to make sure they were created correctly. 
+// The script uses the PCBI Automation API to determine the current step and then calculate the size of the PCB. 
+// The script then runs a loop that incrementally increases the size of the section of the PCB and checks that all parts are placed correctly. 
+// When all areas have been checked, it returns to the original size of the PCB. 
+// The script also includes the ability to pause and resume the run by pressing the 'P' key.
+//-----------------------------------------------------------------------------------
 
 using PCBI.Automation;
 using System;

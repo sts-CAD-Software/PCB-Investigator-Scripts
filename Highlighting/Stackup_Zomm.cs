@@ -9,6 +9,11 @@
 // 
 // Go through all layers to have a fast overview.
 //-----------------------------------------------------------------------------------
+// The script is used to get a quick overview of all layers on a board.
+// It switches all layers on and off one after the other while the board is redrawn.
+// This way you can quickly check if all elements are placed correctly on all layers and if all traces are running correctly.
+// The script can be paused by pressing the "p" key. 
+//-----------------------------------------------------------------------------------
 
 using PCBI.Automation;
 using System;

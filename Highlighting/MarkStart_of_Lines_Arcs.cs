@@ -6,6 +6,10 @@
 // 
 // Show Line and Arc area of selection with start highlighting.
 //-----------------------------------------------------------------------------------
+//The script is used to highlight the lines and arcs that are present in the current selection with a distinctive color.
+//The color and style of the highlighting are specified, as well as the shape of the ends of the lines.
+//A small circle is also added at the beginning of each line and at the start and end points of each arc. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

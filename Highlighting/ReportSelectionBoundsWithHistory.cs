@@ -7,6 +7,11 @@
 // Empty template to fill for asynchronous script.
 //-----------------------------------------------------------------------------------
 // GUID=ReportSelection_Bounds_History637208351977593189
+//
+// This script is used to display information about the dimensions of the selected elements or components.
+// The script draws a rectangle around the selected elements and displays information such as width, height and position.
+// It can also display the units in metric or imperial units. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
