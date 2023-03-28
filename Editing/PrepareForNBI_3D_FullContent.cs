@@ -11,6 +11,9 @@
 // Job opens in NBI Catia
 // Prepare Data for real 3D.
 //-----------------------------------------------------------------------------------
+// This script creates a working copy of the job in the temporary directory and converts the solder resist layers to positive.
+// Copper layers are cut out and drilled before the job is opened in NBI Catia. The script prepares the data for use in a real 3D environment. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

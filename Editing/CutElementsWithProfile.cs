@@ -7,6 +7,12 @@
 // Script to create copy layer with cutted elements on profile outline.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636213806757650301
+//
+// This script is a PCB Investigator automation script that can be used to create a copy of a layer with elements cut out on the profile outline.
+// The script cuts out all elements on the current layer at the outline of the PCB layout and adds them to the new layer.
+// It uses the PCBI API to access and manipulate the layers and elements of the PCB layout.
+// The script could be useful to quickly create a new layer with cut out elements without the user having to manually perform each step. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

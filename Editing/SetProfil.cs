@@ -7,6 +7,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Set Profil to fix Rectangle.
 //-----------------------------------------------------------------------------------
+// The script creates a new contour polygon on the current PCB in the current drawing layer.
+// The size of the new rectangle is defined by specifying the coordinates of the upper left and lower right points.
+// The script creates four lines and adds them to a contour polygon that defines the new contour.
+// After the contour polygon is created, it is set as the new PCB contour and the view is updated. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

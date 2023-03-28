@@ -8,6 +8,10 @@
 // This is helpful for creating clean outlines, to remove double elements in recesses.
 //-----------------------------------------------------------------------------------
 // GUID CutLines_635911405568636453
+//
+// The script traverses all selected lines, searches for intersection points and cuts the lines accordingly to create new lines at the intersection points.
+// The script also contains functions to abort the cutting process and to define a maximum length for the generated lines. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

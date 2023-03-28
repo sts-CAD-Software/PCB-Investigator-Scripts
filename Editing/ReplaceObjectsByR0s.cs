@@ -6,6 +6,11 @@
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Check all active layers for symbols with diameter 0 and replace them by rounded symbol with diameter 1.
+//-----------------------------------------------------------------------------------
+// This script is useful for replacing elements with a diameter of 0 by a new symbol with a specified diameter in a board.
+// It loops through all active layers on a board and for each layer that is an IODBLayer, creates a new symbol with the specified diameter.
+// Then, for each element on the layer that has a diameter of 0, the new symbol is used. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

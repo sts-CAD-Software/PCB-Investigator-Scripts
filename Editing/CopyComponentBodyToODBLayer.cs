@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Copy Component shapes from ODB++ comp_+_top layer to misc layer objects.
 //-----------------------------------------------------------------------------------
+// This script allows to copy the shapes of parts on an ODB++ layer.
+// A new layer is created for the top and bottom shapes of parts.
+// The script goes through all the parts on the current board and copies their shapes to the corresponding layer.
+// The result is a simplified overview of the shapes of the parts on the board. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

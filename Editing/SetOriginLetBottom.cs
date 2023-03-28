@@ -10,6 +10,9 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID=SetOriginLetBottom_636759874699483078
 // ButtonEnabled=1   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+//
+// This script is an automated program used in the PCB Investigator software to set the origin of all board layers and the profile to the lower left corner. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

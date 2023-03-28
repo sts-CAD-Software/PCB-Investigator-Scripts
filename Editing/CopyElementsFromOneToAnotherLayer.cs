@@ -8,6 +8,11 @@
 // You can change this in the first foreach to e.g. fix layer names or make your own dialog to select the layer to copy...
 // This script works from PCB-Investigator version 7.9 up!
 //-----------------------------------------------------------------------------------
+// The script copies the objects from the first layer to the second layer and adapts them to the properties of the second layer.
+// Objects such as lines, arcs, pads, polygons and texts can be copied.
+// The script uses an IFilter interface to create and apply tool definitions to adjust the properties of the objects.
+// The class is relevant to potential PCB software customers who can use the script to automate designs faster and easier. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

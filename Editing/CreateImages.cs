@@ -4,6 +4,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Create images of layers.
 //-----------------------------------------------------------------------------------
+// This script saves an image of each component on each layer of a PCB design as a PNG file in a specified folder.
+// The script retrieves the current layer and checks if a component layer exists.
+// If so, an image of each component on that layer is created for each layer and saved in PNG format in the specified folder.
+// The image is created by creating a bitmap object and saving the resulting image as a PNG file. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

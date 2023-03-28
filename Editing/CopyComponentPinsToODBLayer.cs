@@ -7,6 +7,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Copy Component pins to drawing layer.
 //-----------------------------------------------------------------------------------
+// The Script allows copying component pins to a drawing layer.
+// It creates an empty drawing layer on the top and bottom of the board and then creates a polygon for each pin of each component in the board, which represents the outline of the pin.
+// The color of the polygon is set to blue. The two drawing layers are then activated and the updated board is displayed. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

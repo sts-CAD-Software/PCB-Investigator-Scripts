@@ -10,6 +10,11 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID=AddNetToSelection_636481536908639447
 // ButtonEnabled=16   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+//
+// The purpose of the script is to add a netname to a selected object in the current step of the PCB.
+// The script prompts the user to enter a netname and then iterates through the selected objects, adding the netname to each object's layer and net information.
+// The script also adds a unique identifier and button state so that it can be easily accessed from the ribbon menu. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

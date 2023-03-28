@@ -10,6 +10,12 @@
 // Helper to remove components and make net names unreadable.
 // This script only hide some information, it is possible to recreate the components and document layers.
 //-----------------------------------------------------------------------------------
+// This script is a helper for removing components and making net names unreadable in a PCB-Investigator project.
+// It works by hiding some information, but it is possible to recreate the components and document layers.
+// It uses the IPCBIWindow interface to access and manipulate the data in the current PCB-Investigator project.
+// The script executes by changing net names, deleting layers that contain components and documents, and destroying packages.
+// It saves the modified project as an embedded ZIP file. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

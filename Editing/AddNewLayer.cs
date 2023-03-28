@@ -7,6 +7,10 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Add drawing layer.
 //-----------------------------------------------------------------------------------
+// This script creates a new drawing layer in PCB Investigator. It checks if a job is loaded and then creates a new layer named "help_layer".
+// The new layer is activated and the view is updated. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

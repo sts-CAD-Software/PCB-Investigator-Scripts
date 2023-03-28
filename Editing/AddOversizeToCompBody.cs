@@ -7,6 +7,12 @@
 // Empty template to fill for synchronous script.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636352916501529681
+//
+// The script identifies selected components and checks if they already exist in a hash table.
+// If not, an entry for the used part is created in the hash table.
+// The part is then opened and an oversize of 0.2 mm is added to the package.
+// The updated package is then saved and the display is updated. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

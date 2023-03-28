@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Copy Component body to drawing layer.
 //-----------------------------------------------------------------------------------
+// The script traverses all pins on the "top" layer of the current step in a PCB design and creates polygons that map the outline of each pin.
+// It uses the IPCBIWindow interface to access the current step layer and the layers of the PCB.
+// The polygons are constructed using points, lines and arcs based on the outline of each pin, and are finally updated for display.
+// The script is used to improve the clarity of the board and help customers select the pins they need. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

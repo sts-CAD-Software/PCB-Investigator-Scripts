@@ -8,6 +8,10 @@
 // 
 // Replace all selected surfaces by pads with new special symbol.
 //-----------------------------------------------------------------------------------
+// The script creates a new symbol by selecting all elements within the current step and using their properties to define the symbol.
+// The script then deletes the original elements and replaces them with a pad with the new symbol attached to it.
+// The resulting pad is then given an attribute.
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

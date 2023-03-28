@@ -8,6 +8,11 @@
 //
 // Create Matrix from layer name extentions
 //-----------------------------------------------------------------------------------
+// The main function of the script is to define the order of layers in a board.
+// For this purpose the script reads the names of the layers from the passed IStep object and sorts them based on their type and position.
+// At the end of the script some methods of the IPCBIWindow object are called to update the view and save the changed matrix.
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

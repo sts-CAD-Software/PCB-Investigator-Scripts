@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Change Endpoint of object to close gap between two selected lines.
 //-----------------------------------------------------------------------------------
+// This script is an automation script for PCB-Investigator and has the purpose to close a gap between two lines.
+// The script checks the selected elements to determine if they consist of exactly two lines.
+// If they are, the shortest distance between the two lines is calculated to join the corresponding ends.
+// If one of the elements is an arc line, a connection is also made between the line and the arc line.
+// The script helps customers simplify their work and improve the overview of their PCB layouts by providing a quick and effective way to fill gaps in their designs. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

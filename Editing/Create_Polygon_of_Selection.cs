@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Create polygon out of selectet lines and arcs.
 //-----------------------------------------------------------------------------------
+// The script creates a polygon from a selection of lines and arcs in PCB Investigator.
+// It creates a new empty ODB layer "polygons_n" and then adds all selected arcs and lines one by one to create the polygon.
+// The polygon is then added as a new ODB object on the "polygons_n" layer.
+// If the polygon has multiple parts, each part is added separately.
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

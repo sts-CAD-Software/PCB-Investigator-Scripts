@@ -6,6 +6,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Split Drills depending on attributes.
 //-----------------------------------------------------------------------------------
+// The script is used to split different drill layers into separate ODB++ files.
+// The different drill attributes like "plated" or "via" are taken into account and the objects are sorted accordingly.
+// The script then creates new drill layers with the sorted objects and saves them in separate ODB++ files.
+// If all objects are of the same type, no splitting is performed.
+// It uses a method to create new ODB++ layers and saves the objects in these layers. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

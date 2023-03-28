@@ -6,6 +6,11 @@
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Set Elements to Grid
+//-----------------------------------------------------------------------------------
+// This script allows to set selected elements (like lines or pads) to a specific grid.
+// It defines a function to correct coordinates to the grid and uses this function to adjust the positions of the selected elements accordingly.
+// The grid is defined by a single input defined to 100 mil in the SetToGrid function.
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

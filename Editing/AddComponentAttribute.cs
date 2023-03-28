@@ -6,6 +6,11 @@
 // 
 // Add Attributes to selected components. Input Box for Value.
 //-----------------------------------------------------------------------------------
+// This script is an automated script for the PCB Investigator tool.
+// It adds attribute names to selected components and opens an input window to specify a value for the attribute.
+// The value is then assigned to all selected components.
+//-----------------------------------------------------------------------------------
+
 
 using System;
 using System.Collections.Generic;

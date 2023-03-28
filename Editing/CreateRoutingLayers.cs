@@ -6,6 +6,10 @@
 // Create routing layers with extra layers for cutout and outline.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636129084750092338
+//
+// The script also creates auxiliary layers with uncut elements, routing layers with cutouts, and routing layers with cutouts and outlines.
+// It uses various parameters to adjust the size of the cutouts and spacing. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

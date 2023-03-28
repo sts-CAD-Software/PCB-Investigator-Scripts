@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Create a stripboard PCB
 //-----------------------------------------------------------------------------------
+// It creates a PCB in strip grid design by creating a copper layer, holes and traces.
+// The dimensions of the PCB and its components can be set using parameters in the script.
+// The script creates a certain number of pads on the copper layer by using a donut shape and creates a certain number of holes on the drill layer by using a round shape.
+// The traces are created on the copper layer by the script drawing a series of lines on the PCB. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

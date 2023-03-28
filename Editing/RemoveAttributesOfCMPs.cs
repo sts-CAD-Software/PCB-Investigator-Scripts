@@ -5,6 +5,10 @@
 // 
 // Clear Attributes of components. Input Box for Attribute name.
 //-----------------------------------------------------------------------------------
+// The script is used to browse all component objects in a given step and remove a specific attribute from them.
+// The attribute is entered in a dialog box that is displayed to the user when the script is executed.
+// It can be useful when the user needs to remove an attribute from several component objects at once. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

@@ -6,6 +6,10 @@
 // 
 // Delete all elements outside of PCB profile.
 //-----------------------------------------------------------------------------------
+// This script is used to remove all objects on a PCB that are outside the outline of the PCB.
+// The script uses the PCBI.Plugin and PCBI.Automation namespaces as well as the IPCBIScript interface and various other interfaces to access the schematic elements and the PCB objects.
+// It iterates through all layers of the current step and PCB objects, filters out any layers that contain component elements, and then removes any objects on any remaining layer that are outside the outline of the board.
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

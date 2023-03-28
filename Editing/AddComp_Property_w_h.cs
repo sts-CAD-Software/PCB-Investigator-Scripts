@@ -7,6 +7,13 @@
 // Empty template to fill for synchronous script.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636071173879829987
+//
+// This can be used to extract properties of components on a PCB and write them to a file.
+// The script goes through all components on the current PCB layer and extracts information such as body width, body height, pin width, pin height and pin area.
+// The size of the pins is used to calculate the geometry names of the components.
+// The script also creates custom attribute values for the extracted information, which can then be saved in a table format.
+// The script also has a custom function for adding rectangles. 
+//----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

@@ -8,6 +8,11 @@
 //
 // Create Matrix from layer name extentions like PCB-Investigator gerber output create it.
 //-----------------------------------------------------------------------------------
+// This script is an automation script for PCBI which creates a matrix from the layer names of PCB-Gerber-Output.
+// It arranges the layers in a specific order and assigns a layer type to each layer, such as Silk-Screen or Solder-Mask.
+// At the end the script saves the new order of the layers in the matrix. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

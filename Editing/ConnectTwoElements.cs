@@ -13,6 +13,12 @@
 // GUID ConnectLines_635900140114543121
 // EnableOn JobOpen
 // Category Edit
+//
+// This script allows to connect two selected lines in a PCB design software by merging them at the point where they cross.
+// If the two selected elements are lines, they will be merged directly at the intersection.
+// If they contain arcs, special cases are handled to ensure that they are correctly aligned at the intersection.
+// The script is optimized to work only with two selected elements, each of which can be lines or arcs. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

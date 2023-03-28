@@ -11,6 +11,12 @@
 // GUID=selectionToPolyGon_637877004572433762
 // ButtonEnabled=1   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
 // AutoStart=false
+//
+// This script is used to edit a selected outline in the current PCB board layout file.
+// The script uses a loop to retrieve any selected object whose outline is divided into polygons and subdivided into positive or negative faces.
+// It then creates a new polygon object on the same plane as the selected object and replaces the selected object with the new polygon object.
+// If the original object is negative, the new polygon object will also be set negative.
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

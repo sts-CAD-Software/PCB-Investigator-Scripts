@@ -9,6 +9,10 @@
 // 
 // Replace a selection by one pad with new special symbol.
 //-----------------------------------------------------------------------------------
+// This script creates a new symbol in a PCB design software based on the selected elements. 
+// It first gets a list of selected elements, and then creates a new symbol with a unique name based on those elements. 
+// It then deletes the old elements and creates a new pad at the center of the new symbol with a custom attribute.
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

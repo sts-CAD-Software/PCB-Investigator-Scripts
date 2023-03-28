@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Create lines and arcs out of selectet polygons.
 //-----------------------------------------------------------------------------------
+// This script is for creating lines and arcs from selected polygons in the PCB Investigator software.
+// The script traverses each selected polygon and creates either a line or an arc for each of its edges, depending on the type of edge.
+// The result is stored in a new ODB++ layer named "poly_to_line".
+// The script uses the PCB Investigator API to perform the required operations. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

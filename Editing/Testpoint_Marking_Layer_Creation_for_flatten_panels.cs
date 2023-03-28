@@ -6,6 +6,11 @@
 // Create a testpoint overview.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636153340204189979
+//
+// This script creates a test point at all drill holes on the upper or lower side of the PCB, depending on the selected side.
+// The positions of the test points are arranged in a 500 x 500 grid. The grid is represented by horizontal and vertical lines on which X and Y texts are displayed.
+// The script also deletes existing "testpoint_locations_top" and "testpoint_locations_bot" layers if the useFlattenStep variable is set to false. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

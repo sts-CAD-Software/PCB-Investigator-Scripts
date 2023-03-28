@@ -11,6 +11,11 @@
 // Job opens in NBI Catia
 // Prepare Data for real 3D.
 //-----------------------------------------------------------------------------------
+// The script creates a temporary working copy of the ODB file and then performs several functions to prepare the data for 3D visualization.
+// These functions include removing objects outside the profile, changing the unit of measure to mils, and running the PrepareFor3D_inNBI() function that makes solder mask positive and cuts out holes on copper layers.
+// The MakeDrillCutOutOnCopperLayers() function takes care of cutting holes on copper layers.
+// Finally, the script will open the NBI Catia V5 application to process the data for 3D visualization. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

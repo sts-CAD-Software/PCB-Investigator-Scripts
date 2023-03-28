@@ -5,6 +5,12 @@
 // Set fix fiducial markers on extra layer.
 //-----------------------------------------------------------------------------------
 // GUID C0138764-85A3-4960-B95F-62A4486FF427
+//
+// This script creates fiducial markers on a PCB. It creates a new layer named "fiducial" and then adds two donut pads with the defined dimensions and positions.
+// Each pad is given an attribute name "fiducial_name" and a value of "fid1".
+// The script will run when a job is loaded and will display a warning message if no job is loaded or the new layer cannot be created. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

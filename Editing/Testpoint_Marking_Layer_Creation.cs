@@ -6,6 +6,11 @@
 // Create a testpoint overview.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636153340204189979
+//
+// This script creates test point on both sides of the board on a PCB.
+// It marks the test points in different colors depending on their function (e.g. normal test points, test points above via or test points near component pins).
+// The script also places text next to each test point and associates it with the corresponding component. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

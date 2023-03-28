@@ -7,6 +7,10 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Copy all via pads from one layer("top") to another layer("ViaLayer").
 //-----------------------------------------------------------------------------------
+// The script creates a new layer in a PCB and copies all vias from an existing layer to the new layer.
+// It checks if a job is loaded in the software and if the layers are defined correctly.
+// The vias are created on the new layer as new pads with the same dimensions as the original vias. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

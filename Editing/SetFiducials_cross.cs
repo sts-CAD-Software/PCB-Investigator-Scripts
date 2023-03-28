@@ -5,6 +5,11 @@
 // Set fix fiducial markers on extra layer.
 //-----------------------------------------------------------------------------------
 // GUID C0138764-85A3-4960-B95F-62A4486FF427
+//
+// This script creates two fiducial markers defined as rectangles in the current layer of an open project.
+// These markers are placed on the "fiducial" layer and assigned the attributes "fid1" and "fid2". 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;
