@@ -6,6 +6,13 @@
 // 
 // Conect to an Excel sheet and wirte via locations
 //-----------------------------------------------------------------------------------
+// This script connects to an Excel sheet and writes data about vias and pads on a PCB layout via locations.
+// The script creates an instance of the Excel.Application object and makes it visible. Then it creates a new workbook in Excel.
+// The script then goes through each net on the PCB layout and checks each net object to see if it is a pad or a via. If it is a via, the script writes the type, net name, and position of the via to a StringBuilder object. 
+// If it is a pad on the top or bottom signal layer, the script writes the type, net name, and position of the pad to the StringBuilder object. 
+// Once all pads and vias have been processed, the data is copied to the clipboard as both text and comma-separated values. Finally, the data is pasted into the active sheet in Excel. 
+// The script then releases the Excel object. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

@@ -6,6 +6,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Export component properties to Excel.
 //-----------------------------------------------------------------------------------
+// This script is used to export component properties from PCB-Investigator and display them in Excel.
+// It uses the PowerPCB software and ensures that the selection of components on PCB-Investigator is synchronized with the selection in PowerPCB.
+// The script subscribes to the PCBISelectionChanged event to ensure that the selection of components is updated. When the application exits, the script is disposed of. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

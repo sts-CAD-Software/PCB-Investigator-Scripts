@@ -6,6 +6,12 @@
 // 
 // Write IPC356 A from Gerber274X
 //-----------------------------------------------------------------------------------
+// This script is used to convert Gerber 274X files to IPC356A format.
+// It does so by using the PCB Investigator software to read the Gerber files and extract the necessary information.
+// The script then creates a new file in IPC356A format with the extracted data.
+// The IPC356A format is commonly used for netlist testing in PCB manufacturing. 
+// The script also includes some comments explaining the allowed operation codes for the format. 
+//----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

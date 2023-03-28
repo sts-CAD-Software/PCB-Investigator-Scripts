@@ -9,6 +9,12 @@
 // 
 // Asynchronous script to highlight selection of CMPs.
 //-----------------------------------------------------------------------------------
+// This script is an asynchronous function that executes a loop to highlight a selection of CMPs in the PCB layout software PCB-Investigator.
+// First, all selected CMPs of the current step are selected and the original selection is removed.
+// Then, the color transparency of the unselected CMPs is set to 50% to focus on the selected CMPs.
+// A loop is then alternated between highlighting the CMPs in red and removing the highlighting to draw the user's attention to the selected CMPs.
+// The loop is stopped by calling the Dispose method. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

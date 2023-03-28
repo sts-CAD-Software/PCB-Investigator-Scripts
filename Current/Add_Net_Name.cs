@@ -1,3 +1,14 @@
+//-----------------------------------------------------------------------------------
+// www.pcb-investigator.com
+// SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
+// SDK http://www.pcb-investigator.com/en/sdk-participate
+// Ceck distance components to board outline
+//-----------------------------------------------------------------------------------
+// The script is a C# implementation of a PCB software that sets the net names in a PCB.
+// The main function of the script is to assign a specific net name to the selected objects or to automatically generate net names for all layers in the PCB.
+// The script also defines an auxiliary class "WorkingClass" that contains various methods to facilitate setting net names. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

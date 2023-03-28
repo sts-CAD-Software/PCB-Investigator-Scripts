@@ -8,6 +8,15 @@
 // Display images and report component data on screen
 // on screen HMI
 //-----------------------------------------------------------------------------------
+// The script sets the background color to black and draws only selected components.
+// It then defines a loop that sleeps for one second until the script is disposed of, at which point the loop breaks.
+// The Parent_PCBIFormGraphicPaneDrawing function is called whenever the graphic pane of the PCB window is drawn.
+// The function checks whether a job is loaded and then proceeds to draw a component box, contacts, and component information for each selected component. 
+// The DrawComponentBox function takes each selected component and inflates the bounding rectangle by 120 pixels, drawing a box with a 5-pixel wide border around it. 
+// Four additional small boxes are drawn at the corners, and rectangles are drawn to suppress portions of the graphics that are not of interest. 
+// The script draws a rectangle around Pin 1 of each selected component, inflating the rectangle by 5 pixels. 
+//-----------------------------------------------------------------------------------
+
 
 using System;
 using System.Collections.Generic;

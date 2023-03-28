@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Ceck distance components to board outline
 //-----------------------------------------------------------------------------------
+// This script is a so called automation script for the software "PCB-Investigator".
+// It checks the distance between the components and the board edge (the so-called PCB Outline).
+// If the distance is less than 0.5 mm, the script marks the components in question.
+// A message is output indicating the distance between the components and the PCB edge in mils or microns, depending on the units used by the software. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

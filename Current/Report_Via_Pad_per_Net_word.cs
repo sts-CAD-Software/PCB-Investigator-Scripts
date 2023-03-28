@@ -6,6 +6,8 @@
 // 
 // Empty template to fill for synchronous script.
 //-----------------------------------------------------------------------------------
+// This script creates a list of all via pads on a PCB by searching the coordinates of each via pad and pasting them into a Word document. 
+//----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

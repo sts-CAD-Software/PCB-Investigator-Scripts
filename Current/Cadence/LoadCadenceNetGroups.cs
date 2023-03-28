@@ -7,6 +7,11 @@
 // Empty template to fill for synchronous script.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636028110537710508
+//This script starts the external program "CadenceNetGroup2PCBI.exe" passing the path of the current ODB++ job and the name of the current step as arguments.
+//This enables the PCB-Investigator to open and display the ODB++ files created by the Cadence Allegro PCB Editor.
+//The script then updates the PCB Investigator view to display the newly loaded data. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;
