@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Get Bounds of the design.
 //-----------------------------------------------------------------------------------
+// Its purpose is to retrieve and display the bounds of the current job or step in mils.
+// The script checks for the bounds of the current job using the GetJobBounds() method, and if it is empty, it checks for the bounds of the current step using the GetBounds() method.
+// If both of these methods fail to return a valid bounding rectangle, the script iterates through all signal layers of the current step.
+// It retrieves their bounds, and calculates the combined bounds of all signal layers using the AddRectangleD() method from the IMath interface. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

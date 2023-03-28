@@ -12,6 +12,11 @@
 // GUID newScript_635937300928476402
 // EnableOn JobOpen
 // Category Report
+//
+// The script is used to calculate the area of the side walls of selected components on the top and/or bottom side of a PCB.
+// It allows to calculate for the whole PCB or only for selected components. Various mathematical operations are used to calculate the area.
+// The result is displayed in a message that shows the area of the top and/or bottom component sidewalls as well as the area of the entire PCB in the appropriate unit of measurement. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

@@ -7,6 +7,13 @@
 // Empty template to fill for asynchronous script.
 //-----------------------------------------------------------------------------------
 // GUID=ReportSelection_Bounds_637208351977593187
+//
+// This is a script that helps to display the dimensions of the loaded board on the screen.
+// It displays the width and height of the board in the user's unit and shows the coordinates of the upper left corner, lower right corner and center of the board.
+// The script is executed asynchronously to allow smooth interaction with the user interface.
+// It also draws a green box around the loaded board and shows a guide line to measure the width and height of the board. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

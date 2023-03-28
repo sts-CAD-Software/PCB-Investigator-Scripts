@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Count Pins and Component from selection.
 //-----------------------------------------------------------------------------------
+// The script counts the number of pins and components in the current selection within the PCB-Investigator interface.
+// It does this by first getting the current step and then creating a filter based on the parent window.
+// The script then loops through all selected components and gets the count of pins for each one.
+// Finally, the script displays a message box with the total number of selected components and the total number of pins for all selected components. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

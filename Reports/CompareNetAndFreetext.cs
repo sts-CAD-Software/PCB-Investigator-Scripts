@@ -5,7 +5,12 @@
 // www.pcb-investigator.com
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/en/sdk-participate
-// Create report to check all net names are written in the freetext?
+// Create report to check all net names are written in the freetext.
+//-----------------------------------------------------------------------------------
+// The script checks if all net names are written in the free text field and gives a message if there are differences between the two.
+// First the current step of the PCB is retrieved and then each layer of the step is traversed.
+// Each object on the layer is checked for differences between the free text and the net name. If a difference is found, it is stored in a list.
+// Finally, a message is displayed with a list of all differences between the free text and the net name. 
 //-----------------------------------------------------------------------------------
 
 using System;

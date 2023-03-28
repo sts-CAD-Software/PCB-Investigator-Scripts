@@ -7,6 +7,11 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Export Component Attributes to Excel.
 //-----------------------------------------------------------------------------------
+// The script exports component properties from the current step view in PCB-Investigator to a Word document.
+// It creates a new Word instance, adds a new document, inserts the component properties into the document and closes the Word instance.
+// The result is a table with reference name, component name, component package and value. 
+//----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

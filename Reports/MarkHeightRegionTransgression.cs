@@ -7,6 +7,12 @@
 // This checks each cmp over the surfaces on relevant layer with drc_max_height attribute.
 //-----------------------------------------------------------------------------------
 // GUID markHeightRegionTransgression_635963030633639805
+//
+// The script is used to mark all components in areas with maximum height on the drc_comp layer.
+// This is done by checking each component above the surfaces on relevant layers with the drc_max_height attribute.
+// The script looks for this attribute on the surfaces touching the respective component.
+// If the attribute is present and the height of the part is greater than the drc_max_height value on the surface, the part is highlighted and a hint is added. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

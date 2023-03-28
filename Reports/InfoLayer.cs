@@ -6,6 +6,9 @@
 // 
 // Show details of all active layers, it will calculate eht area and show matrix information.
 //-----------------------------------------------------------------------------------
+// This script is used to display details about all active layers in a PCB, including the area and matrix information.
+// It opens a window with a text box that displays the details, including the size and position of the layer and the area. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

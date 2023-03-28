@@ -9,6 +9,10 @@
 // 
 // Mark all pins with wrong net connection (it checks the pin pad and compare it with net data of component pin).
 //-----------------------------------------------------------------------------------
+// This script marks all pins with wrong net assignments by comparing the pin pad net data with the component pin net data.
+// If a difference is detected, the pin color is changed and a count is made of how many differences occurred.
+// Report generation is also possible. The script works only on the current step. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

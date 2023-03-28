@@ -7,6 +7,12 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Export Component Attributes to Excel.
 //-----------------------------------------------------------------------------------
+// This script is used to export a list of components on a PCB to an Excel spreadsheet.
+// An Excel object is created that accepts the data and inserts it into the spreadsheet.
+// The script reads the component references, names, packages and values from all CMP objects (components) on the current PCB layer.
+// The data is copied to the clipboard as text and CSV and then pasted into Excel. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

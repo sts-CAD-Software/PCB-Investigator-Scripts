@@ -5,6 +5,12 @@
 // 
 // Copy elements on extra layer and make objects negative to subtract mask form top/bot copper, than calculate area.
 //-----------------------------------------------------------------------------------
+// The script aims to calculate the copper area.
+// It creates a new layer called "copper" on the current PCB.
+// Then retrieves the top and bottom copper layers and their masks, and makes the mask objects negative to subtract them from the copper layer.
+// The script copies and pastes the mask objects onto the "copper" layer and polygonizes the top and bottom copper layers.
+// Finally, the script calculates the area of the copper layer. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

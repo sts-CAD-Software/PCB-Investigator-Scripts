@@ -7,6 +7,12 @@
 // Empty template to fill for asynchronous script.
 //-----------------------------------------------------------------------------------
 // GUID C3F100ED-BD22-4322-B634-56CFFD5BF9B6
+//
+// The given script can be used for a visualization of PCBs. It is an asynchronous script.
+// The script creates a graphical representation of PCBs in PCB-Investigator PCB software.
+// Using the script, customers can visualize the location and orientation of PCBs within panels.
+// In addition, it is possible to display specific information such as the name of the PCB and its rotation. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

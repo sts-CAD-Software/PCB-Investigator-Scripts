@@ -5,11 +5,15 @@
 // SDK online reference http://www.pcb-investigator.com/sites/default/files/documents/InterfaceDocumentation/Index.html
 // SDK http://www.pcb-investigator.com/sdk-participate
 // Updated: 28.06.2018
-// Description: Enter your description here
 //-----------------------------------------------------------------------------------
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID=MatrixReport_636657914018588414
 // ButtonEnabled=1   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+//
+// The script is used to create a matrix overview of PCB layers.
+// It creates a new window with a table containing information about each layer such as its name, thickness and position in the layer stack.
+// The color of each row is colored based on the layer type (signal, power/ground, solder resist, solder paste, dielectric or components). 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

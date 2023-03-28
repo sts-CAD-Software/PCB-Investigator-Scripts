@@ -7,6 +7,9 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Check components and mark PTHs.
 //-----------------------------------------------------------------------------------
+// The script searches the parts and marks the vias that are used for hole-mounted parts.
+// When a via is found, the "techno" attribute and the "thr" value are added to the part and it is highlighted in color. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

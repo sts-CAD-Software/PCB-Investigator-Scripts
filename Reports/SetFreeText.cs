@@ -8,6 +8,12 @@
 // Create special info to ODB++ objects and write it in "Freetext" field.
 // (Update V2)
 //-----------------------------------------------------------------------------------
+// Depending on the selected "TextType", the method iterates over the PCB objects and adds free text to the objects describing various properties of the object.
+// For example, the script calculates the length of lines and pads and adds the value as free text to the respective object.
+// There is also a method that calculates the length of a net connection and adds the value as free text to the objects in question.
+// The free text information field is displayed on all PCB layers and the view is updated. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;
