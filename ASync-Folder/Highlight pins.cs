@@ -6,6 +6,11 @@
 // 
 // Example to highlight pins on top component layer with asynchronous script.
 //-----------------------------------------------------------------------------------
+//This script highlights pins on the top component level that are connected to the GND network.
+//It is executed at regular intervals to change the color of the pins to highlight them.
+//The script is executed asynchronously so as not to affect the performance of the application.
+//It also uses the UpdateView method to ensure that the changes are visible on the screen. 
+//-----------------------------------------------------------------------------------
 
 using PCBI.Automation;
 using System;

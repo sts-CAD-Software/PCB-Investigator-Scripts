@@ -9,6 +9,10 @@
 // 
 // Asynchronous script to highlight selection of CMPs.
 //-----------------------------------------------------------------------------------
+//This script is an asynchronous script for the PCB-Investigator software. It is used to mark the selection of CMPs (Component Placement).
+//At the beginning the selected CMPs are determined and the original selection is cancelled. Then the color setting for the selected elements is changed and the pin numbers are hidden.
+//In a loop, the color of the CMPs is changed at regular intervals to create a blinking effect. The script stops running when it is terminated by the user. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

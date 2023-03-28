@@ -12,6 +12,10 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID Snake_Zoom_06F4BBC8-F3B1-41D3-9E6C-CAD407DE5FB3
 // ButtonEnabled=1   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+//----------------------------------------------------------------------------------
+//This script is used to place a grid over the board and zoom in small areas from bottom left to top right to check all parts on the board. Each zoom level is held at a specified interval.
+//The script responds to the "p" key to pause or resume the script. 
+//---------------------------------------------------------------------------------
 
 using PCBI.Automation;
 using System;

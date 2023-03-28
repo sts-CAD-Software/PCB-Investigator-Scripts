@@ -12,7 +12,16 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID Component_Info_F3D0D40A-6889-4662-8F48-041949197D69
 // ButtonEnabled=5   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
-
+//-------------------------------------------------------------------------------------
+//This is a C# script for PCB-Investigator that displays information about a selected component in the graphic pane without the need for an extra dialog. 
+//The script shows the reference designator, part name, package name, and all attributes and geometry attributes associated with the component. 
+//The script sets up an asynchronous execution environment and uses the Execute method to begin execution. It first checks if there is a loaded job and registers an event handler for the graphic pane drawing event.  
+//The Parent_PCBIFormGraphicPaneDrawing method is called whenever the graphic pane needs to be redrawn, and it calls the DrawContact and DrawComponentInfo methods to display the company name and component information, respectively. 
+//The DrawComponentInfo method iterates through all selected components in the current step and displays their information. The component reference designator is displayed first, followed by the part name, package name,
+//and all attributes and geometry attributes associated with the component. The DrawContact method displays the company name in the top left corner of the graphic pane. 
+//The script uses various C# graphics methods to draw text and rectangles on the graphic pane. It also uses the ICMPObject interface to access the selected components 
+//and their associated information. Finally, the script sets up a loop that waits until the script is disposed before unregistering the event handler and ending execution. 
+//-------------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

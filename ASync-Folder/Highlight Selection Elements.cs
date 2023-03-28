@@ -9,6 +9,10 @@
 // 
 // Asynchronous script to highlight selection.
 //-----------------------------------------------------------------------------------
+//This script is used to highlight the selected objects in a PCB layout. A loop is executed every second to switch between the coloring of the objects.
+//When an object is selected, it is highlighted either white or in its original color, depending on the state of the onOff variable.
+//The script works asynchronously, which means that it runs in the background while the user can continue to perform other tasks in PCB-Investigator. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

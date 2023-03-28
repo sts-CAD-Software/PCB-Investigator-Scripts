@@ -12,7 +12,14 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID Customer_Info_889B2D46-E68D-439D-91D2-A2DCCE2C7385
 // ButtonEnabled=1   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
-
+//-----------------------------------------------------------------------------------
+//This script is designed to show the details of the current job in the graphic pane.
+//It uses various methods to draw text and shapes on the pane to display information such as the current date, the number of selected components and features, and the references of the selected components. 
+//The script listens for the PCBIFormGraphicPaneDrawing event of the IPCBIScriptASync interface and calls various methods to draw on the pane.
+//The DrawContact, DrawDate, DrawSelectedCompsCount, DrawSelectedFeatureCount, DrawSelectedRefs, and DrawSelectedNetList methods use the Graphics object passed to them to draw on the pane. 
+//The Execute method sets up the event listener and waits until the script is disposed before removing the listener.
+//The isDisposed field is not shown in the code but is likely set to true when the script is disposed to break the loop in the Execute method. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
