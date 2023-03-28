@@ -14,7 +14,14 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID Export_TGZ_636154949275554301
 // ButtonEnabled=1   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
-
+//
+// The script uses the 7-Zip software to create the TGZ archive. If 7-Zip is not installed on the C drive, the script issues a warning message.
+// The script is invoked from the ribbon menu and is only active when a design file is loaded.
+// When the script is executed, it opens a dialog box to select the location of the TGZ archive.
+// The TGZ archive is then created and saved to the selected location.
+// If the CreateCompressedTARGZFile parameter is set to true, the TGZ archive is compressed and created in a temporary directory.
+// When the process is complete, the archive is moved to the original location and the temporary directory is deleted. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

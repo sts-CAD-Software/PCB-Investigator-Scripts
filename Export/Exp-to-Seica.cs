@@ -10,6 +10,7 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID=Exp-to-Seica_636485805346479961
 // ButtonEnabled=5   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

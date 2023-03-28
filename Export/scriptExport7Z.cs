@@ -7,6 +7,12 @@
 // Example script how to save 7z archiv, this can easiely be modified for tgz or rar.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636154949275554301
+//
+// This script is an example of how to create and save a 7z archive.
+// The script shows how to open a SaveFileDialog to select the location and name of the archive.
+// Then the archive is created using the 7-Zip tool, which must be installed on the D-drive.
+// The archive is created from the ODB++ job directory and recursively all contained files and folders are added. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

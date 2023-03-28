@@ -7,11 +7,15 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // 
 // All active layers will be polygonize without flatten of arcs, this is necessary for IDF export to get smaller elements.
-// This script change the layer data, if you save changes it will remove many elements and replace it with surfaces.
 //-----------------------------------------------------------------------------------
 // GUID PrepareIDFExport_635900140114543122
 // EnableOn JobOpen
 // Category Edit
+//
+// This script is useful to convert all active layers of the current step into a polygonal shape without flattening arcs.
+// This is necessary for exporting IDF files to get smaller elements.
+// It script changes the layer data and when you save changes, many elements are removed and replaced with surfaces. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
