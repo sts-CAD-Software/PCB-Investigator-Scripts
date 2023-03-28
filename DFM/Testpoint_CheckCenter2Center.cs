@@ -12,6 +12,11 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID Testpoint_Check_636288129921985500
 // ButtonEnabled=5   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+//
+// This script was developed for the PCB-Investigator software to perform a check of the distances between components and test points.
+// The script checks the distances between test points and marks components with a different color if the distance between a test point and a component is smaller than the minimum distance.
+// A result message is displayed in a dialog box to give the user a quick overview. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

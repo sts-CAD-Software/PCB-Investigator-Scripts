@@ -6,6 +6,11 @@
 // 
 // Check distances between maks and solder paste.
 //-----------------------------------------------------------------------------------
+// The script checks the distances between solder mask and solder paste on a PCB.
+// It uses the PCB Investigator API to find the solder mask and solder paste layers and then traverses all objects in the solder paste layer to calculate the distances.
+// The result is written to an Excel spreadsheet and copied to the clipboard for easy access.
+// If no distances are found, an error message is displayed. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

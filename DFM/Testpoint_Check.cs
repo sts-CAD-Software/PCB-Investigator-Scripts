@@ -12,6 +12,13 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID Testpoint_Check_636288129921985500
 // ButtonEnabled=5   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+// This script checks the distances between components and test points on the board and then creates a summary.
+// The script analyzes the top and bottom planes and looks for test points on each plane.
+// It checks the distance between test points and other components on the same plane, and between test points on the same plane.
+// A message is displayed if a component is too close to a test point, and the number of checked test points and components is displayed in the summary.
+// The check is performed with a defined minimum distance, which is defined in the constants of the script. 
+//-----------------------------------------------------------------------------------
+
 
 using System;
 using System.Collections.Generic;

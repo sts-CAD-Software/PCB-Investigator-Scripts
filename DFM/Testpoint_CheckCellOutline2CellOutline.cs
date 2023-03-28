@@ -12,6 +12,12 @@
 // Favorite scripts can be placed in the ribbon menu. Therefore a unique GUID and a ButtonEnabled state is mandatory:
 // GUID Testpoint_Check_636288129921985500
 // ButtonEnabled=5   (Button enabled if: 1=Design is loaded, 2=Always, 4=Design contains components, 8=Loaded step is a panel, 16=Element is selected, 32=Component is selected)
+//
+// This script is designed to check the distances between components and test points on the board.
+// It checks the top and bottom planes for components, searches for test points, and then checks the distances between the test points and the components and between the test points themselves.
+// If the distance is less than a certain threshold, this is indicated in a dialog box report.
+// The goal is to provide customers with an easy way to determine if the distances between components and test points in their circuits are correct. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

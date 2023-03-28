@@ -7,6 +7,14 @@
 // Script for checking top and bot solder mask for free areas above pads.
 // If component's available only pin pads are checked, the solder mask should be >= signal pads area.
 //-----------------------------------------------------------------------------------
+// The script checks if there is enough free space on the solder mask layers.
+// If there is enough free space on both solder mask layers, a message is displayed that both sides are OK.
+// If there is not enough free space on both solder mask layers, a message is displayed that no side is free.
+// If only one side has enough free area, a message is displayed that this side is OK, but the other side needs to be checked.
+// The script checks all pads on the "Top Signal", "Bottom Signal" and "Solder Mask" layers for free space in the mask.
+// It also checks if the pads on the "Top Signal" or "Bottom Signal" layer are present.
+// If they are present, they are highlighted in blue to indicate them. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

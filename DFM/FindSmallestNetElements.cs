@@ -7,6 +7,11 @@
 // 
 // Check all nets and find smallest elements of each net.
 //-----------------------------------------------------------------------------------
+// This script is used to determine the smallest diameter of all elements of a net on a PCB.
+// In the Execute method of the script, a progress bar is created and all nets on the current board are traversed.
+// For each net, a list of all elements in the net is created and the smallest diameter is determined.
+// The results are stored in a StringBuilder and displayed in a MessageBox at the end of the execution. 
+//----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

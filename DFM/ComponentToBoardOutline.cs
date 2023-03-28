@@ -7,6 +7,12 @@
 // Empty template to fill for synchronous script.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636354458630923556
+//
+// This script is a template for synchronized PCB-Investigator automation scripts that allow users to quickly and easily perform an analysis of the distance between components and the PCB outline.
+// The script loads a list of components and compares the distance between each component and the PCB outline.
+// If the measured distance is less than the user-specified threshold, a results list of affected components is generated and displayed.
+// The user can then select the affected components and have the view of the PCB automatically zoomed to the selected area. 
+//---------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
