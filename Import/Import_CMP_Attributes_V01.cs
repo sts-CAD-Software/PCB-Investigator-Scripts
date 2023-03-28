@@ -7,7 +7,9 @@
 // 
 // Add Component Attributes to an ODB++ job.
 //-----------------------------------------------------------------------------------
-
+// The code uses the PCBI.Plugin library to open an Excel spreadsheet that contains attributes to be added to the components.
+// The script then searches the PCB layout data to find the appropriate components and adds the attributes.
+// The script displays a window with the Excel spreadsheet that allows the user to edit the spreadsheet before the attributes are added. 
 
 // Comment	Description	Footprint	LibRef	Quantity	Designator
 // 1uF	0603 1 uF 16 V �10% Tolerance X5R SMT Multilayer Ceramic Capacitor	PCB-9voc856bm8rdirtpr58d-1	CMP-19299708-5	1	C1

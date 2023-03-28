@@ -5,10 +5,16 @@
 // Autor Fabio.Gruber
 // 
 // Import gerber and excellon file output from Cadence Allegro (tools defined as comments beginning with ; and much more information like tolerance and quantity).
-// It checks for unit MM or MILS.
 // To use the script configurate the leading and trailing digits at the script begin.
 //-----------------------------------------------------------------------------------
 // GUID newScript_635954556024364499
+//
+// This script can be used to import Gerber and Exzellenon files from Cadence Allegro.
+// The files are analyzed and it is checked if the unit MM or MILS is used.
+// The user can specify the leading and trailing digits in the script.
+// If both Gerber and bore files are loaded, automatic scaling is performed.
+// The script then outputs a drill file in INCH format. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

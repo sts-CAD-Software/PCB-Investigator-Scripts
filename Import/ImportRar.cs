@@ -7,6 +7,13 @@
 // Example script how to open rar archiv, this can easiely be modified for 7z or zip.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636154949275554301
+//
+// The script uses the WinRAR software, which must be installed on the C drive.
+// If the software is not found, a warning is displayed and the script terminates.
+// The archive is unpacked and the contents are stored in a temporary directory.
+// Then each folder in the directory is searched and each file is loaded into PCB-Investigator.
+// If a file can be loaded, a confirmation message is displayed, otherwise a warning is displayed. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

@@ -7,6 +7,10 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Open one file on specific location
 //-----------------------------------------------------------------------------------
+// This script is a PCB-Investigator automation script which is used to open a file in a specific location.
+// In this case it loads a Gerber file with the path "D:\D_\jobs_Jobs\A2z34\gerberfile.ger".
+// The script is structured in such a way that it is able to perform further actions on the opened file. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections;

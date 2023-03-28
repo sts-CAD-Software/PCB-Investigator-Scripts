@@ -7,6 +7,12 @@
 // Empty template to fill for synchronous script.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636138465480261016
+//
+// This script is a template for a synchronous script in PCB-Investigator.
+// The code adds a group of nets by reading a .harness file that contains an assignment of nets to groups.
+// The group is then added or removed from the nets accordingly, depending on its mapping in the .harness file.
+// The script uses the IPCBIWindow interface to handle the current working environment. It also provides a loop that can import a custom DLL if needed. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

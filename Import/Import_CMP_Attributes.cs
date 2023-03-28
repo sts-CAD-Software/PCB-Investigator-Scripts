@@ -9,6 +9,10 @@
 // 
 // Script to import attribute for components from clipboart (e.g. MS excel).
 //-----------------------------------------------------------------------------------
+// The script allows the user to import attributes for parts from the clipboard (e.g. from MS Excel).
+// It consists of a class that opens a dialog window with a button for inserting data from the clipboard and a button for adding attributes to the parts.
+// The script should be used when the user wants to import attributes for multiple parts quickly and easily from another source, such as an Excel spreadsheet. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

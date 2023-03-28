@@ -8,6 +8,10 @@
 
 // Open ODB++ Job on hardcoded path on your local drive D (You have to change the path depending on your directory structure).
 //-----------------------------------------------------------------------------------
+// This script is used to open an ODB++ jobfile that is located in a fixed location on the local D drive.
+// The script loads the jobfile and activates the "pcb" step.
+// It is important to note that the location of the jobfile must be changed in the code line to match the actual location of the jobfile on the user's computer. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections;
