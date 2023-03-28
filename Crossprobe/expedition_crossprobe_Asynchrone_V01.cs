@@ -7,6 +7,13 @@
 //
 // Cross Probe Components in Expedition. This example works only with running Expedition!
 //-----------------------------------------------------------------------------------
+// This script allows cross-probing of components in Expedition.
+// Cross-probing refers to the ability to switch between two views of a circuit or design while maintaining focus on a specific component or part.
+// In this script, the selected components are highlighted in Expedition and the zoom is set to the selection.
+// The script also includes code that connects to the Expedition PCB design software and validates a license.
+// It also contains a method for releasing resources used by the application.
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;

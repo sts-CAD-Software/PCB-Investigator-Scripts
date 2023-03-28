@@ -6,6 +6,13 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Synchronize Expedition zoom to PCB Investigator zoom.
 //-----------------------------------------------------------------------------------
+// This script is an automation script for the "PCB-Investigator" software that connects to another software called "MGCPCB".
+// The goal of the script is to synchronize the zoom view between "Expedition" and "PCB-Investigator".
+// The script uses PCB-Investigator's API and MGCPCB's COM interface to implement this functionality.
+// The script subscribes to events such as "PCBISelectionChanged" and "PCBIFormGraphicPaneDrawing",
+// to respond to user actions in the PCB-Investigator user interface and adjust the zoom in MGCPCB accordingly. 
+//------------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Text;
