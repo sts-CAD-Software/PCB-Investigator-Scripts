@@ -7,6 +7,10 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Open odb file from fix path.
 //-----------------------------------------------------------------------------------
+// The script loads an ODB++ job directory and then activates a step within this job.
+// The local path to the ODB++ directory must be specified in the code. 
+//-----------------------------------------------------------------------------------
+
 using System;
 using System.Collections;
 using System.Xml;

@@ -7,6 +7,10 @@
 // 
 // Remove mini arcs by replaceing them as lines on all IODB layers.
 //-----------------------------------------------------------------------------------
+// This script removes mini-arcs. The script searches all layers of the current PCB for mini arcs.
+// If a mini-arc is found that does not exceed a certain length and has a minimum line width, it is replaced by a line.
+// The script uses the IPCBIWindow interface to access the current PCB and display the result of the operation. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

@@ -10,6 +10,11 @@
 // GUID newScript_635900140114543121
 // EnableOn JobOpen
 // Category Overview
+//
+//The script creates an image that gives an overview of all signal lines (including holes and components).
+//The user is prompted for the number of rows desired for the signal line image arrangement. Then, for each signal layer, the corresponding image is created.
+//In this process, the signal layer is activated and all other layers are deactivated. Holes and components can also be integrated into the image.
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

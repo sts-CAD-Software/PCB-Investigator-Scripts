@@ -5,6 +5,13 @@
 // 
 // Set setup variants for batch file.
 //-----------------------------------------------------------------------------------
+//EXAMPLE_FOR_STARTUP_SETTINGS.CS 
+
+// The script is used to set a special configuration for the batch mode of the software. 
+// It defines various settings for the software,
+// e.g. whether colored text is displayed in the layer list, whether transparent surfaces are displayed, whether the control is visible and whether information about nets is displayed on all layers. 
+// The script is executed when the batch mode is activated and then sets the specified settings. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

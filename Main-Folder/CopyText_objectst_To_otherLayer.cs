@@ -7,6 +7,10 @@
 // Empty template to fill for synchronous script.
 //-----------------------------------------------------------------------------------
 // GUID newScript_636264684078812126
+//
+// This script imports several modules and a custom DLL, and then creates a new layer that contains all the IODBObjecte from the active layers of the current step layer that contain the "_string" attribute key.
+// These objects are removed from their original layers and placed in the new layer. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

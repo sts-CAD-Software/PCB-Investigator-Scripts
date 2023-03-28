@@ -5,6 +5,9 @@
 // 
 // Make copy of job and open it in temporary path.
 //-----------------------------------------------------------------------------------
+// The script is  used to create and open a temporary working copy of a job.
+// Its code retrieves the temporary storage path and stores the current job in the temporary path. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;

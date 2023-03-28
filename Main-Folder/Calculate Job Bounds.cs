@@ -7,6 +7,10 @@
 // SDK http://www.pcb-investigator.com/en/sdk-participate
 // Check all elements and calculate bounds.
 //-----------------------------------------------------------------------------------
+// The script is a PCB Investigator automation script created to check all the elements in a PCB and calculate their boundaries.
+// It is used to determine the size of the PCB and provide information about the boundaries of the PCB in mil.
+// The script uses the PCB Investigator SDK reference to access the API of the software to calculate the board's boundaries. 
+//-----------------------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
